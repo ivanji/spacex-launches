@@ -7,11 +7,12 @@ const typeDefs = gql`
     site: String
     mission: Mission
     rocket: Rocket
+    isBooked: Boolean!
   }
 
   type Mission {
     name: String
-    missionPatch(size: PatchSize): String
+    missionPatch(mission: String, size: PatchSize): String
   }
 
   type Rocket {
